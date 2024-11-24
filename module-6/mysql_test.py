@@ -1,5 +1,12 @@
 import mysql.connector
-from mysql.connector import Error
+from mysql.connector import errorcode
+import dotenv
+from dotenv import dotenv_values
+
+# Load the .env file
+secrets = dotenv_values(".env")
+
+print(secrets)
 
 try:
     connection = mysql.connector.connect(
